@@ -134,28 +134,68 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('projectResults').innerText = project.results;
         document.getElementById('projectConclusion').innerText = project.conclusion;
 
-        // Populate Gallery
-        const gallery = document.getElementById('projectGallery');
-        gallery.innerHTML = '';
+        // Populate Header Icon
+        const iconImg = document.getElementById('projectIconImg');
         if (project.media.images && project.media.images.length > 0) {
-            project.media.images.forEach(imgSrc => {
-                const img = document.createElement('img');
-                img.src = imgSrc;
-                img.alt = `Project image for ${project.title}`;
-                gallery.appendChild(img);
-            });
+            iconImg.src = project.media.images[0];
+            iconImg.alt = project.title;
         } else {
-            gallery.style.display = 'none';
+            document.getElementById('projectIcon').style.display = 'none';
         }
 
-        // Handle PDF
-        const pdfSection = document.getElementById('projectPdf');
+        // Handle PDF Section
+        const pdfContainer = document.getElementById('projectPdfContainer');
+        const pdfFrame = document.getElementById('pdfFrame');
         const pdfLink = document.getElementById('pdfLink');
+        
         if (project.media.pdf) {
-            pdfSection.style.display = 'flex';
-            pdfLink.href = project.media.pdf;
+            pdfContainer.style.display = 'block';
+            pdfFrame.src = project.media.pdf;
+
+            // Update download link
+            const pdfDownloadLink = document.getElementById('pdfDownloadLink');
+            if (pdfDownloadLink) pdfDownloadLink.href = project.media.pdf;
+
+            // View Report toggle
+            const viewReportBtn = document.getElementById('viewReportBtn');
+            const pdfViewerWrapper = document.getElementById('pdfViewerWrapper');
+            const closeReportBtn = document.getElementById('closeReportBtn');
+
+            if (viewReportBtn && pdfViewerWrapper && closeReportBtn) {
+                viewReportBtn.addEventListener('click', () => {
+                    pdfViewerWrapper.style.display = 'block';
+                    pdfViewerWrapper.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    viewReportBtn.textContent = 'Viewer Open ↓';
+                });
+                closeReportBtn.addEventListener('click', () => {
+                    pdfViewerWrapper.style.display = 'none';
+                    viewReportBtn.textContent = 'Open Viewer';
+                });
+            }
         } else {
-            pdfSection.style.display = 'none';
+            pdfContainer.style.display = 'none';
+        }
+
+        // Handle Video Section
+        const videoSection = document.getElementById('projectVideoSection');
+        const videoFrame = document.getElementById('projectVideoFrame');
+        
+        if (project.media.video) {
+            videoSection.style.display = 'block';
+            // Show Watch Video button in header
+            const headerActions = document.getElementById('headerActions');
+            if (headerActions) headerActions.style.display = 'flex';
+
+            // Convert regular YouTube link to embed link if necessary
+            let videoSrc = project.media.video;
+            if (videoSrc.includes('youtube.com/watch?v=')) {
+                videoSrc = videoSrc.replace('watch?v=', 'embed/');
+            } else if (videoSrc.includes('youtu.be/')) {
+                videoSrc = videoSrc.replace('youtu.be/', 'youtube.com/embed/');
+            }
+            videoFrame.src = videoSrc;
+        } else {
+            videoSection.style.display = 'none';
         }
         
         // Ensure fade-ins are visible

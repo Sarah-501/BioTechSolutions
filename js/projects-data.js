@@ -8,7 +8,11 @@ const projectsData = [
     methodology: "We engineered bacterial strains to express luciferase in the presence of heavy metals, creating a portable biological sensor.",
     results: "The BioSensor detected arsenic and lead at concentrations as low as 10ppb within 15 minutes of exposure.",
     conclusion: "This technology provides an early-warning system for water contamination that is both cost-effective and highly sensitive.",
-    media: { images: ["assets/images/projects pictures/BioSensor.jpeg"], pdf: null }
+    media: { 
+      images: ["assets/images/projects pictures/BioSensor.jpeg"], 
+      pdf: "assets/documents/report-sample.pdf",
+      video: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+    }
   },
   {
     id: "zno-nanoparticles",
@@ -19,7 +23,11 @@ const projectsData = [
     methodology: "We studied the effect of ZnO concentration on the metabolic activity of soil-purifying bacteria in bioreactors.",
     results: "Specific microbial consortia were found to effectively stabilize ZnO nanoparticles, preventing their spread in soil layers.",
     conclusion: "Integrated nano-biological systems offer a new frontier for cleaning up high-tech industrial waste.",
-    media: { images: ["assets/images/projects pictures/Zn0 .jpeg"], pdf: null }
+    media: { 
+      images: ["assets/images/projects pictures/Zn0 .jpeg"], 
+      pdf: "assets/documents/report-sample.pdf",
+      video: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+    }
   },
   {
     id: "natures-solution",
@@ -30,7 +38,11 @@ const projectsData = [
     methodology: "We identified and isolated key 'pioneer' species that naturally accelerate soil enrichment in degraded regions.",
     results: "Ecosystem recovery was 60% faster when using optimized biological inoculation compared to natural recovery.",
     conclusion: "Leveraging nature's own mechanisms is the most sustainable approach to long-term biodiversity restoration.",
-    media: { images: ["assets/images/projects pictures/naturesSolution.jpeg"], pdf: null }
+    media: { 
+      images: ["assets/images/projects pictures/naturesSolution.jpeg"], 
+      pdf: "assets/documents/report-sample.pdf",
+      video: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+    }
   },
   {
     id: "bac-01",
@@ -41,7 +53,11 @@ const projectsData = [
     methodology: "Screening of microbial libraries for enzymes that target high-stability aromatic rings under anaerobic conditions.",
     results: "Isolation of a novel Pseudomonas strain with a 30% higher degradation efficiency for industrial solvents.",
     conclusion: "Targeted microbial evolution can provide solutions for even the most persistent man-made chemicals.",
-    media: { images: ["assets/images/projects pictures/bac 01.jpeg"], pdf: null }
+    media: { 
+      images: ["assets/images/projects pictures/bac 01.jpeg"], 
+      pdf: "assets/documents/report-sample.pdf",
+      video: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+    }
   },
   {
     id: "bac-02",
@@ -52,7 +68,11 @@ const projectsData = [
     methodology: "Insertion of foreign gene clusters into E. coli to enable the metabolization of high-toxicity waste byproducts.",
     results: "Engineered strains showed sustained growth in waste concentrations that were previously lethal.",
     conclusion: "Genetically modified organisms (GMOs) are essential for converting waste directly into valuable bioproducts.",
-    media: { images: ["assets/images/projects pictures/bac02.jpeg"], pdf: null }
+    media: { 
+      images: ["assets/images/projects pictures/bac02.jpeg"], 
+      pdf: "assets/documents/report-sample.pdf",
+      video: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+    }
   },
   {
     id: "bac-03",
@@ -63,7 +83,11 @@ const projectsData = [
     methodology: "Sampling and cultivation of bacteria from extreme thermal vents to isolate heat-stable polymerases.",
     results: "Identification of a new thermostable enzyme that remains active up to 95°C for extended periods.",
     conclusion: "Extremophiles provide the blueprint for the next generation of robust industrial bio-catalysts.",
-    media: { images: ["assets/images/projects pictures/bac03.jpeg"], pdf: null }
+    media: { 
+      images: ["assets/images/projects pictures/bac03.jpeg"], 
+      pdf: "assets/documents/report-sample.pdf",
+      video: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+    }
   },
   {
     id: "bac-04",
@@ -74,7 +98,11 @@ const projectsData = [
     methodology: "Application of bio-augmentation using metal-binding bacterial consortia in contaminated soil samples.",
     results: "Significant reduction in the bioavailability of Lead and Cadmium within 90 days of treatment.",
     conclusion: "Biological immobilization is a cost-effective alternative to mass soil excavation and replacement.",
-    media: { images: ["assets/images/projects pictures/bac04.jpeg"], pdf: null }
+    media: { 
+      images: ["assets/images/projects pictures/bac04.jpeg"], 
+      pdf: "assets/documents/report-sample.pdf",
+      video: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+    }
   },
   {
     id: "bac-05",
@@ -85,7 +113,11 @@ const projectsData = [
     methodology: "Optimizing the production of Polyhydroxyalkanoates (PHA) in bacteria using agricultural waste as feed.",
     results: "Achieved a 45% increase in biopolymer yield through specific gene expression optimization.",
     conclusion: "Bacterial factories can produce high-quality materials that are fully biodegradable in marine environments.",
-    media: { images: ["assets/images/projects pictures/bac05.jpeg"], pdf: null }
+    media: { 
+      images: ["assets/images/projects pictures/bac05.jpeg"], 
+      pdf: "assets/documents/report-sample.pdf",
+      video: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+    }
   },
   {
     id: "bac-06",
@@ -96,7 +128,11 @@ const projectsData = [
     methodology: "Engineering carbonic anhydrase producing bacteria to accelerate the mineralization of CO2 in saline aquifers.",
     results: "Enhanced CO2 mineralization rate by 2.5x compared to standard geological sequestration.",
     conclusion: "Biological carbon capture is a promising tool for achieving net-zero emissions targets.",
-    media: { images: ["assets/images/projects pictures/bac06.jpeg"], pdf: null }
+    media: { 
+      images: ["assets/images/projects pictures/bac06.jpeg"], 
+      pdf: "assets/documents/report-sample.pdf",
+      video: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+    }
   },
   {
     id: "bac-07",
@@ -107,7 +143,11 @@ const projectsData = [
     methodology: "Redesigning the central metabolism of Clostridium to maximize solvent production and minimize waste.",
     results: "Yields increased by 20%, significantly improving the economic viability of the fermentation process.",
     conclusion: "Genetic engineering is the key to making biofuels a competitive alternative to fossil fuels.",
-    media: { images: ["assets/images/projects pictures/bac07.jpeg"], pdf: null }
+    media: { 
+      images: ["assets/images/projects pictures/bac07.jpeg"], 
+      pdf: "assets/documents/report-sample.pdf",
+      video: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+    }
   },
   {
     id: "bac-08",
@@ -118,7 +158,11 @@ const projectsData = [
     methodology: "Metagenomic analysis of soil samples to identify microbial genes that encode plastic-degrading enzymes.",
     results: "Discovered three novel gene clusters that play a primary role in the degradation of PLA and PBS plastics.",
     conclusion: "Mapping these pathways allows us to design the 'perfect' plastic that breaks down exactly when intended.",
-    media: { images: ["assets/images/projects pictures/bac08.jpeg"], pdf: null }
+    media: { 
+      images: ["assets/images/projects pictures/bac08.jpeg"], 
+      pdf: "assets/documents/report-sample.pdf",
+      video: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+    }
   },
   {
     id: "bac-09",
@@ -129,7 +173,11 @@ const projectsData = [
     methodology: "Protein engineering and directed evolution to enhance the stability and activity of PETase enzymes.",
     results: "Engineered enzyme showed a 10x increase in degradation speed at industrial temperatures.",
     conclusion: "Circular plastic economies are possible when biology is used to close the loop on waste.",
-    media: { images: ["assets/images/projects pictures/bac09.jpeg"], pdf: null }
+    media: { 
+      images: ["assets/images/projects pictures/bac09.jpeg"], 
+      pdf: "assets/documents/report-sample.pdf",
+      video: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+    }
   },
   {
     id: "bac-10",
@@ -140,7 +188,11 @@ const projectsData = [
     methodology: "Constructing synthetic microbial consortia and monitoring their stability and cleanup efficiency in the field.",
     results: "Multi-species biofilms were 50% more resistant to toxic shocks than single-species systems.",
     conclusion: "The future of bioremediation lies in understanding and designing complex microbial communities.",
-    media: { images: ["assets/images/projects pictures/bac10.jpeg"], pdf: null }
+    media: { 
+      images: ["assets/images/projects pictures/bac10.jpeg"], 
+      pdf: "assets/documents/report-sample.pdf",
+      video: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+    }
   },
   {
     id: "bac-11",
@@ -151,6 +203,10 @@ const projectsData = [
     methodology: "Integration of multiple degradation pathways from various species into a single, high-growth host strain.",
     results: "The resulting 'super-strain' can simultaneously metabolize heavy metals, plastics, and industrial solvents.",
     conclusion: "A universal biological waste treatment solution is within reach through advanced synthetic biology.",
-    media: { images: ["assets/images/projects pictures/bac11.jpeg"], pdf: null }
+    media: { 
+      images: ["assets/images/projects pictures/bac11.jpeg"], 
+      pdf: "assets/documents/report-sample.pdf",
+      video: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+    }
   }
 ];

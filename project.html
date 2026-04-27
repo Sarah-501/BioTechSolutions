@@ -6,7 +6,7 @@
     <title>Project Details | BioTech Solutions</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="project-page">
 
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
@@ -31,9 +31,19 @@
     <!-- Project Header -->
     <header class="project-header">
         <div class="container fade-in">
+            <div id="projectIcon" class="project-header-icon">
+                <img id="projectIconImg" src="" alt="" loading="lazy">
+            </div>
             <span class="category" id="projectCategory">Category</span>
             <h1 id="projectTitle">Project Title</h1>
-            <p id="projectShortDesc" style="font-size: 1.2rem; color: #555; max-width: 700px; margin: 0 auto;">Short description goes here.</p>
+            <p id="projectShortDesc">Short description goes here.</p>
+            
+            <div id="headerActions" class="header-actions" style="display: none; margin-top: 30px;">
+                <a href="#projectVideoSection" class="btn btn-outline" style="display: flex; align-items: center; gap: 10px; margin: 0 auto;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                    Watch Video
+                </a>
+            </div>
         </div>
     </header>
 
@@ -60,21 +70,57 @@
             <p id="projectConclusion">Loading conclusion...</p>
         </div>
 
-        <div class="content-block fade-in" id="projectMediaSection">
-            <h2>Media & Resources</h2>
-            
-            <div class="project-gallery" id="projectGallery">
-                <!-- Images injected here -->
+        <!-- Video Section -->
+        <div class="content-block fade-in" id="projectVideoSection">
+            <h2>🎥 Project Video</h2>
+            <div class="video-container">
+                <iframe id="projectVideoFrame" src="" allowfullscreen></iframe>
             </div>
+        </div>
 
-            <div class="pdf-download" id="projectPdf" style="display: none;">
-                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--accent-main)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
-                <div>
-                    <h4 style="margin-bottom: 5px;">Project Report</h4>
-                    <a href="#" id="pdfLink" class="project-link" target="_blank" download>
-                        Download PDF File
-                    </a>
+        <!-- PDF & Resources Section -->
+        <div class="content-block fade-in" id="projectMediaSection">
+            <h2>📄 Document & Resources</h2>
+            <p class="media-note">For the best experience, we recommend downloading the full report.</p>
+
+            <!-- PDF Viewer and Download -->
+            <div id="projectPdfContainer" style="display: none;">
+                
+                <!-- Action Cards -->
+                <div class="report-actions-grid">
+                    <!-- View Report -->
+                    <div class="report-card">
+                        <div class="report-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--accent-main)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                        </div>
+                        <div class="report-content">
+                            <h4>View Report</h4>
+                            <p>Read the detailed PDF report directly in your browser.</p>
+                            <button class="btn btn-outline" id="viewReportBtn" style="width: 100%; margin-top: 10px;">Open Viewer</button>
+                        </div>
+                    </div>
+
+                    <!-- Download Report -->
+                    <div class="report-card">
+                        <div class="report-icon eco-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--accent-eco)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                        </div>
+                        <div class="report-content">
+                            <h4>Download PDF</h4>
+                            <p>Save the report to your device for offline reading.</p>
+                            <a href="#" id="pdfDownloadLink" class="btn btn-eco" style="width: 100%; margin-top: 10px; display: block; text-align: center; box-sizing: border-box;" target="_blank" download>Download File</a>
+                        </div>
+                    </div>
                 </div>
+
+                <!-- Hidden PDF Viewer -->
+                <div id="pdfViewerWrapper" style="display: none; margin-top: 40px;">
+                    <div class="pdf-viewer">
+                        <iframe id="pdfFrame" src="" width="100%" height="100%"></iframe>
+                    </div>
+                    <button class="btn btn-main" id="closeReportBtn" style="width: 100%; margin-top: 15px;">Close Viewer</button>
+                </div>
+
             </div>
         </div>
 
